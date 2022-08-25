@@ -1,10 +1,10 @@
 <div class="container mx-auto">
-  <h1 class="text-3xl font-bold underline m-6">{{ title }}</h1>
+  <h1 class="text-3xl font-bold underline m-6 animate ping">{{ title }}</h1>
 
   <div class="text-center">
     <table>
       <thead>
-        <tr>
+        <tr class="underline text-xl">
           <th>Number</th>
           <th></th>
           <th>Name</th>
@@ -14,13 +14,21 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of menuItems; index as i" class="hover:bg-sky-100">
-          <td class="m-6">{{ i }}</td>
-          <td class="m-6">
+          <td>
+            <span class="m-4">{{ i }}</span>
+          </td>
+          <td>
             <fa-icon class="text-2xl m-6" [icon]="item.icon"></fa-icon>
           </td>
-          <td class="m-6">{{ item.name }}</td>
-          <td class="m-6">{{ categories[item.category] }}</td>
-          <td class="m-6">{{ item.price | currency }}</td>
+          <td>
+            <span class="m-4">{{ item.name }}</span>
+          </td>
+          <td>
+            <span class="m-4">{{ categories[item.category] }}</span>
+          </td>
+          <td>
+            <span class="m-4">{{ item.price | currency }}</span>
+          </td>
         </tr>
       </tbody>
     </table>
