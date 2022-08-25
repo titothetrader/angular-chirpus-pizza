@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { MenuItem } from '../interfaces/menu-item';
 
 import {
-  faCoffee,
   faPizzaSlice,
   faDrumstickBite,
   faBreadSlice,
@@ -10,6 +9,7 @@ import {
   faIceCream,
   faBeerMugEmpty,
 } from '@fortawesome/free-solid-svg-icons';
+import { Categories } from './enums/categories';
 
 @Component({
   selector: 'app-root',
@@ -18,47 +18,47 @@ import {
 })
 export class AppComponent {
   title = 'Chirpus Pizza';
-  faCoffee = faCoffee;
+  categories = Categories;
 
   menuItems: MenuItem[] = [
     {
       name: 'Chicken Fingers',
-      category: 'Dinner',
+      category: 0,
       price: 11.99,
       icon: faDrumstickBite,
     },
 
     {
       name: 'Pizza',
-      category: 'Dinner',
+      category: 0,
       price: 11.99,
       icon: faPizzaSlice,
     },
 
     {
       name: 'Breadsticks',
-      category: 'Sides',
+      category: 3,
       price: 4.99,
       icon: faBreadSlice,
     },
 
     {
       name: 'Caesar Salad',
-      category: 'Salads',
+      category: 2,
       price: 5.99,
       icon: faLeaf,
     },
 
     {
       name: 'Ice Cream',
-      category: 'Dessert',
+      category: 1,
       price: 8.99,
       icon: faIceCream,
     },
 
     {
       name: 'Beer',
-      category: 'Drink',
+      category: 4,
       price: 3.99,
       icon: faBeerMugEmpty,
     },

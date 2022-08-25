@@ -1,6 +1,6 @@
 export interface MenuItem {
   name: string;
-  category: string;
+  category: number;
   price: number;
   icon: any;
 }
